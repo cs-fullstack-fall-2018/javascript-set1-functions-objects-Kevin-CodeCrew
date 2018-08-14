@@ -1,69 +1,100 @@
+<!--
+
+This code will generate a list of Person objects and then
+populate an HTML table with the information for each person.
+
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Great Musicians</title>
-  <style>
-    body {
-      background-color: aliceblue;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Great Musicians</title>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+    </style>
+    <script>
+            // Build an array of People
+            var people = [
+                {
+                    firstName: "Jimmy",
+                    lastName: "Page",
+                    age: 62,
+                    zipCode: "00821"
+
+                },
+                {
+                    firstName: "Rick",
+                    lastName: "Nielsen",
+                    age: 57,
+                    zipCode: "61016"
+
+                },
+                {
+                    firstName: "Joe",
+                    lastName: "Walsh",
+                    age: 58,
+                    zipCode: "90001"
+
+                },
+                {
+                    firstName: "Lemmy",
+                    lastName: "Kilmister",
+                    age: 57,
+                    zipCode: "21120"
+
+                }
+            ];
+
+            // Write the JavaScript to return a valid table row containing the data for a given Person object
+            function makeTRFromPerson(person) {
+                return "<tr><td>" + person.firstName + "</td><td>" + person.lastName + "</td><td>" + person.age + "</td><td>" + person.zipCode + "</td></tr>";
+            }
+    </script>
 </head>
 <body>
 
 <!-- This HTML Table will display all the People from our list -->
 <p>
 <table width="100%">
-  <tr>
-    <td colspan="4">
-      <hr color="yellow" width="60%">
-      <hr color="purple" width="80%">
-      <hr color="green" width="60%">
-    </td>
-  </tr>
-  <tr>
-    <td align="center" colspan="4"><h1>List a Great Musicians: Present and Past</h1></td>
+    <tr>
+        <td colspan="4">
+            <hr color="yellow" width="60%">
+            <hr color="purple" width="80%">
+            <hr color="green" width="60%">
+        </td>
+    </tr>
+    <tr>
+        <td align="center" colspan="4"><h1>List a Great Musicians: Present and Past</h1></td>
 
-  </tr>
-  <tr>
-    <td colspan="4">
-      <hr color="yellow" width="60%">
-      <hr color="purple" width="80%">
-      <hr color="green" width="60%">
-    </td>
-  </tr>
-  <tr>
-    <td align="center">First Name</td>
-    <td align="center">Last Name</td>
-    <td align="center">Age</td>
-    <td align="center">Zip Code</td>
-  </tr>
-  <tr>
-    <td colspan="4">
-      <hr color="red" width="100%">
-    </td>
-  </tr>
-  <!-- *** ENTER YOUR CODE HERE *** Write the JavaScript and HTML necessary to add a row to this HTML table for each Person -->
+    </tr>
+    <tr>
+        <td colspan="4">
+            <hr color="yellow" width="60%">
+            <hr color="purple" width="80%">
+            <hr color="green" width="60%">
+        </td>
+    </tr>
+    <tr>
+        <td align="center">First Name</td>
+        <td align="center">Last Name</td>
+        <td align="center">Age</td>
+        <td align="center">Zip Code</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <hr color="red" width="100%">
+        </td>
+    </tr>
+    <!-- Write the JavaScript and HTML necessary to add a row to this HTML table for each Person -->
+    <script>
+        for (var i = 0; i < people.length; i++) {
+            document.write(makeTRFromPerson(people[i]));
+        }
+    </script>
 </table>
 </p>
-<script>
 
-  // *** ENTER YOUR CODE HERE ***
-  // Create a list of Person objects as described in the README
-  /*
-  Jimmy Page, 62, 00821
-
-  Rick Nielsen, 57, 61016
-
-  Joe Walsh, 58, 90001
-
-  Lemmy Kilmister, 57, 21120
-
-   */
-
-  // *** ENTER YOUR CODE HERE ***
-  // Write the JavaScript to return a valid table row containing the data for a given Person object
-
-</script>
 </body>
 </html>
